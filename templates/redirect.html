@@ -1,6 +1,12 @@
-Wacht een moment of <a href="{% redirecturl %}">Klik hier</a> om door te gaan
+{% <redirectmessage %} Wacht een moment of <a href="{% <redirectbaseurl %}{% <redirecturl %}{% <redirectsuffix %}">Klik hier</a> om door te gaan
 <script type="text/javascript">
+var redirectTimeout = 0{% redirecttimeout %};
+
+if (redirectTimeout == 0) {
+    redirectTimeout = 2000;
+}
+
 window.setTimeout(function(){
-    window.location.href = "{% redirecturl %}";
-}, 2000);
+    window.location.href = "{% <redirectbaseurl %}{% <redirecturl %}{% <redirectsuffix %}";
+}, redirectTimeout);
 </script>
