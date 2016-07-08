@@ -1,6 +1,6 @@
 {% <reloadmessage %} - Wacht een moment of herlaad.
 <script type="text/javascript">
 window.setTimeout(function(){
-    location.reload(true);
+    window.location = window.location.href.split("#")[0];
 }, 400);
 </script>
